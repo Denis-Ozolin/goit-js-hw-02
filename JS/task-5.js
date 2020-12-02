@@ -1,41 +1,16 @@
-const value = prompt('Введите страну, в которую желаете осуществить доставку');
-let country = '';
-let price = 0;
+const checkForSpam = function(message) {
+    message = message.toLowerCase();
 
-switch (value.toLowerCase()){
-    case 'китай':
-        country = 'Китай';
-        price = 100;
-        console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-        break;
-    
-    case 'чили':
-        country = 'Чили';
-        price = 250;
-        console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-        break;
-    
-    case 'австралия':
-        country = 'Австралия';
-        price = 170;
-        console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-        break;
-    
-    case 'индия':
-        country = 'Индия';
-        price = 80;
-        console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-        break;
-    
-    case 'ямайка':
-        country = 'Ямайка';
-        price = 120;
-        console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
-        break;
-    
-    default:
-        alert('В вашей стране доставка не доступна');    
-}
+    return message.includes('sale') || message.includes('spam');
+};
 
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+console.log(checkForSpam('Latest technology news')); // false
 
+console.log(checkForSpam('JavaScript weekly newsletter')); // false
 
+console.log(checkForSpam('Get best sale offers now!')); // true
+
+console.log(checkForSpam('[SPAM] How to earn fast money?')); // true

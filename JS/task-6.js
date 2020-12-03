@@ -1,15 +1,27 @@
-let input = prompt('Введите число');
+let input = '';
 const numbers = [];
 let total = 0;
 
 while (true) {
+    input = prompt('Введите число');
+    
     if (input !== null) {
-        numbers.push(Number.input);
+        input = Number(input);
+        if (Number.isNaN(input)) {
+            alert('Было введено не число, попробуйте еще раз');
+        } else {
+            numbers.push(input);
+        }  
+        
+    } else {
+        
         for (const number of numbers){
             total += number;
         }
-    } else { 
-            console.log(`'Общая сумма чисел равна ${total}`);
+        
+        // console.log(numbers);
+        console.log(`'Общая сумма чисел равна ${total}`);
+        
         break;
     }
-}
+} 

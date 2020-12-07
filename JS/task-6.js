@@ -18,6 +18,7 @@ while (true) {
         for (const number of numbers){
             total += number;
         }
+       
         
         // console.log(numbers);
         console.log(`'Общая сумма чисел равна ${total}`);
@@ -25,3 +26,8 @@ while (true) {
         break;
     }
 } 
+
+
+
+
+

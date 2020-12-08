@@ -1,6 +1,4 @@
 const formatString = function(string) {
-  // твой код
-    string = string.split('');
 
     // if (string.length <= 40) {
     //     return string.join('');
@@ -8,7 +6,7 @@ const formatString = function(string) {
     //     return `${string.slice(0, 40).join('')}...`;
     // }
 
-   return string.length <= 40? string.join(''): `${string.slice(0, 40).join('')}...`;
+   return string.length <= 40? string: `${string.slice(0, 40)}...`;
 };
 
 /*
